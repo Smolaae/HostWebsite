@@ -107,7 +107,7 @@
               Login
             </a>
             <a
-               href="/createaccount.html"
+               href="/register.html"
                class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm whitespace-nowrap hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                >
               Get Started
@@ -142,7 +142,7 @@
             Login
           </a>
           <a
-             href="createaccount.html"
+             href="register.html"
              class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm whitespace-nowrap hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
              >
             Get Started
@@ -182,9 +182,9 @@
 
     <!-- Plans -->
         <div
-        class="grid grid-cols-1 mt-12 md:grid-cols-2 lg:grid-cols-4 place-items-center pl-16 pr-16">
+        class="grid grid-cols-1 gap-16 mt-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center pl-16 pr-16">
         <template x-for="(plan, i) in plans" x-key="i">
-          <section class="flex flex-col w-64 max-w-sm p-10 space-y-6 bg-dark-lighter rounded-lg shadow-md">
+          <section class="flex flex-col w-[280px] max-w-sm p-10 space-y-6 bg-dark-lighter rounded-lg shadow-md">
 
              <!-- Name -->
              <div class="flex-shrink-0 pb-6 border-b ">
@@ -202,18 +202,53 @@
           
             <!-- Features -->
             <ul class="flex-1 space-y-4">
-              <template x-for="(feature, i) in plan.features" x-key="i">
-                <li class="flex items-start">
-                  <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="ml-3 text-base text-white font-medium " x-text="feature"></span>
+              <template x-for="(feature, i) in plan.features" :key="i">
+                <li class="flex items-start text-white">
+                  <!-- CPU -->
+                  <template x-if="getFeatureIcon(feature) === 'cpu'">
+                    <img width="20" height="20" src="/assets/img/icons8-electronics-50.png" alt="electronics"/>
+                  </template>
+                  
+                  <!-- vcore -->
+                  <template x-if="getFeatureIcon(feature) === 'vCore'">
+                    <img width="20" height="20" src="/assets/img/icons8-serveur-48.png" alt="servers"/>
+                  </template>
+                
+                  <!-- RAM -->
+                  <template x-if="getFeatureIcon(feature) === 'ram'">
+                    <img width="20" height="20" src="/assets/img/icons8-ram-49.png" alt="Ram"/>
+                  </template>
+            
+                  <!-- SSD -->
+                  <template x-if="getFeatureIcon(feature) === 'ssd'">
+                    <img width="20" height="20" src="/assets/img/icons8-ssd-50.png" alt="SSD"/>
+                  </template>
+
+                  <!-- gpbs -->
+                  <template x-if="getFeatureIcon(feature) === 'gbps'">
+                    <img width="20" height="20" src="/assets/img/icons8-lan-24.png" alt="gbps"/>
+                  </template>
+
+                  <!-- Joueurs -->
+                  <template x-if="getFeatureIcon(feature) === 'players'">
+                    <img width="20" height="20" src="/assets/img/icons8-groupe-50.png" alt="players"/>
+                  </template>
+            
+                  <!-- Par défaut -->
+                  <template x-if="getFeatureIcon(feature) === 'check'">
+                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.7-9.3a1 1 0 00-1.4-1.4L9 10.6 7.7 9.3a1 1 0 10-1.4 1.4l2 2a1 1 0 001.4 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </template>
+            
+                  <span class="ml-3 text-base font-medium" x-text="feature"></span>
                 </li>
               </template>
             </ul>
+            
 
             <!-- Included -->
-            <ul class="flex-1 space-y-4">
+            <ul class="flex-1 space-y-2">
               <template x-for="(included, i) in plan.included" x-key="i">
                 <li class="flex items-start">
                   <svg class="w-6 h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
@@ -227,7 +262,7 @@
             <!-- Button -->
             <div class="flex-shrink-0 pt-4">
               <button
-                class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 :class="plan.name == 'Basic' ? 'bg-indigo-500 text-white hover:bg-indigo-700' : 'hover:bg-indigo-500 hover:text-white'"
                 x-text="`Get ${plan.name}`"
               ></button>

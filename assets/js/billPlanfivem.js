@@ -44,6 +44,39 @@ const setup = () => {
             features: ['Intel 3.40GHz', '8 vCore', '16 GO Ram', '160 GO SSD', '10 Gbps', '128 Joueurs'],
             included: [ 'TX Admin', 'Clé Argentum incluse', 'Protection DDoS L4 & L7'],
            },
+
+           {
+            name: 'FiveM Ultimate',
+            
+            price: {
+            monthly: 399,
+            annually: 399 * 12 - 100,
+            },
+            features: ['Intel 3.40GHz', '12 vCore', '24 GO Ram', '240 GO SSD', '10 Gbps', '192 Joueurs'],
+            included: [ 'TX Admin', 'Clé Argentum incluse', 'Protection DDoS L4 & L7'],
+           },
+
+           {
+            name: 'FiveM Extreme',
+            
+            price: {
+            monthly: 499,
+            annually: 499 * 12 - 100,
+            },
+            features: ['Intel 3.40GHz', '16 vCore', '32 GO Ram', '320 GO SSD', '10 Gbps', '256 Joueurs'],
+            included: [ 'TX Admin', 'Clé Argentum incluse', 'Protection DDoS L4 & L7'],
+           },
+
+           {
+            name: 'FiveM Extreme +',
+            
+            price: {
+            monthly: 599,
+            annually: 599 * 12 - 100,
+            },
+            features: ['Intel 3.40GHz', '16 vCore', '32 GO Ram', '320 GO SSD', '10 Gbps', '256 Joueurs'],
+            included: [ 'TX Admin', 'Clé Argentum incluse', 'Protection DDoS L4 & L7'],
+           },
         {
             name: 'FiveM sur mesure',
             
@@ -55,5 +88,16 @@ const setup = () => {
             included: [ 'TX Admin', 'Clé Argentum incluse', 'Protection DDoS L4 & L7'],
             },
         ],
+        getFeatureIcon(feature) {
+            const f = feature.toLowerCase();
+            if (f.includes('intel')) return 'cpu';
+            if (f.includes('vcore')) return 'vCore';
+            if (f.includes('ram')) return 'ram';
+            if (f.includes('ssd')) return 'ssd';
+            if (f.includes('gbps')) return 'gbps';
+            if (f.includes('joueurs')) return 'players';
+            return 'check';
+          }
+
     }
 }
