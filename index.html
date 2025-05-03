@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaeHosting - Hébergement de Serveurs de Jeux et VPS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8a2be2',
+                        secondary: '#6a11cb',
+                        dark: {
+                            DEFAULT: '#121212',
+                            light: '#1e1e1e',
+                            lighter: '#2d2d2d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <!-- Navigation -->
+    <header class="bg-dark sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-server text-primary text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold">LaeHosting</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#games" class="hover:text-primary transition-colors">Jeux</a>
+                    <a href="#vps" class="hover:text-primary transition-colors">VPS</a>
+                    <a href="#dedicated" class="hover:text-primary transition-colors">Serveurs Dédiés</a>
+                    <a href="#pricing" class="hover:text-primary transition-colors">Tarifs</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:block">
+                    <a href="#" class="bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md font-semibold transition-colors">Espace Client</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menuToggle" class="text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#games" class="hover:text-primary transition-colors">Jeux</a>
+                    <a href="#vps" class="hover:text-primary transition-colors">VPS</a>
+                    <a href="#dedicated" class="hover:text-primary transition-colors">Serveurs Dédiés</a>
+                    <a href="#pricing" class="hover:text-primary transition-colors">Tarifs</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-dark via-dark-light to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Hébergez Vos Serveurs de Jeux et VPS</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-10">
+                    Performance, stabilité et support 24/7 pour vos serveurs FiveM, Minecraft, GMod et bien plus encore.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-primary hover:bg-purple-700 text-white px-8 py-4 rounded-md font-semibold text-lg transition-colors">
+                        Commencer maintenant
+                        <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                    <a href="#" class="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-md font-semibold text-lg transition-colors">
+                        Voir les offres
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-shield-alt text-primary text-4xl mb-4"></i>
+                    <h3 class="font-bold text-lg">Protection DDoS</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-bolt text-primary text-4xl mb-4"></i>
+                    <h3 class="font-bold text-lg">Haute Performance</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-clock text-primary text-4xl mb-4"></i>
+                    <h3 class="font-bold text-lg">Uptime 99.9%</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-headset text-primary text-4xl mb-4"></i>
+                    <h3 class="font-bold text-lg">Support 24/7</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Servers Section -->
+    <section id="games" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Serveurs de Jeux <span class="text-primary">Optimisés</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- FiveM -->
+                <div class="bg-dark-light rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-48 bg-dark-lighter relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-2xl font-bold">FiveM</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serveurs FiveM</h3>
+                        <p class="text-gray-400 mb-6">Hébergez votre serveur GTA RP avec une performance optimale</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Installation automatique</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Ressources optimisées</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Accès FTP</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Base de données MySQL</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 border-t border-dark-lighter">
+                        <a href="./fivem.html" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                            À partir de 15€/mois
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Minecraft -->
+                <div class="bg-dark-light rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-48 bg-dark-lighter relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-2xl font-bold">Minecraft</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serveurs Minecraft</h3>
+                        <p class="text-gray-400 mb-6">Java ou Bedrock, serveurs optimisés pour tous vos besoins</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Panneau de contrôle Pterodactyl</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Installation de mods facile</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Sauvegardes automatiques</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Support pour plugins</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 border-t border-dark-lighter">
+                        <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                            À partir de 8€/mois
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GMod -->
+                <div class="bg-dark-light rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-48 bg-dark-lighter relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-2xl font-bold">GMod</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serveurs Garry's Mod</h3>
+                        <p class="text-gray-400 mb-6">Hébergez vos modes de jeu préférés avec une performance optimale</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Installation de workshop facile</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Support pour addons</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Configuration DarkRP</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Accès FastDL</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 border-t border-dark-lighter">
+                        <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                            À partir de 12€/mois
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VPS Section -->
+    <section id="vps" class="py-20 bg-dark-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Serveurs <span class="text-primary">VPS</span>
+            </h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8 grid grid-cols-2 rounded-md overflow-hidden">
+                    <button class="tab-btn active py-4 text-center bg-dark-lighter font-semibold transition-colors" data-tab="linux">Linux VPS</button>
+                    <button class="tab-btn py-4 text-center bg-dark-lighter font-semibold transition-colors" data-tab="windows">Windows VPS</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="linux">
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">VPS Starter</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        5€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>2 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>2 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>20 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>1 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg border-2 border-primary relative">
+                                <div class="absolute  left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">
+                                    Populaire
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">VPS Pro</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        15€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>4 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>8 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>80 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>3 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">VPS Elite</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        30€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>8 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>16 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>160 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>5 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane hidden" id="windows">
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Windows Starter</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        10€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>2 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>4 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>40 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>1 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg border-2 border-primary relative">
+                                <div class="absolute left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">
+                                    Populaire
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Windows Pro</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        25€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>4 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>8 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>100 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>3 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Windows Elite</h3>
+                                    <div class="text-3xl font-bold text-primary mb-6">
+                                        45€<span class="text-sm text-gray-400">/mois</span>
+                                    </div>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>8 vCPU</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>16 GB RAM</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>200 GB SSD</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            <span>5 TB Bande passante</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-6 py-4 border-t border-dark-lighter">
+                                    <a href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                        Commander
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Servers Section -->
+    <section id="dedicated" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Serveurs <span class="text-primary">Dédiés</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-dark-light rounded-lg overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serveur Dédié Game</h3>
+                        <p class="text-gray-400 mb-4">Idéal pour les serveurs de jeux à forte charge</p>
+                        <div class="text-3xl font-bold text-primary mb-6">
+                            80€<span class="text-sm text-gray-400">/mois</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>AMD Ryzen 7 5800X</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>32 GB DDR4 RAM</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>2x 512 GB NVMe SSD</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1 Gbps Bande passante illimitée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Protection DDoS avancée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Linux ou Windows</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 border-t border-dark-lighter">
+                        <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                            Commander
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-dark-light rounded-lg overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Serveur Dédié Pro</h3>
+                        <p class="text-gray-400 mb-4">Pour les besoins professionnels et les grandes communautés</p>
+                        <div class="text-3xl font-bold text-primary mb-6">
+                            150€<span class="text-sm text-gray-400">/mois</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>AMD Ryzen 9 5950X</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>64 GB DDR4 RAM</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>2x 1 TB NVMe SSD</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>10 Gbps Bande passante illimitée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Protection DDoS avancée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Linux ou Windows</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 border-t border-dark-lighter">
+                        <a href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                            Commander
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-dark-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Pourquoi Choisir <span class="text-primary">LaeHosting</span> ?
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-bolt text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Performance Optimale</h3>
+                    <p class="text-gray-400">
+                        Nos serveurs sont équipés de processeurs de dernière génération et de SSD NVMe pour des performances exceptionnelles.
+                    </p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Protection DDoS</h3>
+                    <p class="text-gray-400">
+                        Protection contre les attaques DDoS incluse avec tous nos services pour une disponibilité maximale.
+                    </p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-headset text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Support 24/7</h3>
+                    <p class="text-gray-400">
+                        Notre équipe de support technique est disponible 24/7 pour vous aider avec toutes vos questions.
+                    </p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-server text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Panneau de Contrôle</h3>
+                    <p class="text-gray-400">
+                        Interface intuitive pour gérer vos serveurs, avec accès FTP, console et sauvegardes.
+                    </p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-clock text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Uptime Garanti</h3>
+                    <p class="text-gray-400">
+                        Nous garantissons un uptime de 99.9% pour tous nos services avec SLA.
+                    </p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-smile text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Satisfaction Client</h3>
+                    <p class="text-gray-400">
+                        Plus de 10 000 clients satisfaits nous font confiance pour leurs besoins d'hébergement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Ce que disent nos <span class="text-primary">Clients</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark-light p-6 rounded-lg shadow-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "J'héberge mon serveur FiveM chez LaeHosting depuis plus d'un an et je suis très satisfait. Le support est réactif et la performance est au rendez-vous."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-lg font-bold mr-3">
+                            M
+                        </div>
+                        <div>
+                            <p class="font-semibold">Maxime D.</p>
+                            <p class="text-sm text-gray-400">Propriétaire de serveur FiveM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-light p-6 rounded-lg shadow-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Le VPS que j'ai loué pour mon serveur Minecraft est parfait. Installation rapide et aucun problème de lag même avec 50 joueurs connectés."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-lg font-bold mr-3">
+                            S
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sophie L.</p>
+                            <p class="text-sm text-gray-400">Administratrice Minecraft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-light p-6 rounded-lg shadow-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Le serveur dédié que nous utilisons pour notre communauté GMod est excellent. Le support technique nous a aidés à tout configurer parfaitement."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-lg font-bold mr-3">
+                            T
+                        </div>
+                        <div>
+                            <p class="font-semibold">Thomas R.</p>
+                            <p class="text-sm text-gray-400">Gérant de communauté GMod</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-dark to-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                Contactez-<span class="text-primary">Nous</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Besoin d'aide ?</h3>
+                    <p class="text-gray-300 mb-6">
+                        Notre équipe est disponible 24/7 pour répondre à toutes vos questions. N'hésitez pas à nous contacter.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-4"></i>
+                            <span>+33 1 23 45 67 89</span>
+                        </div>
+
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-4"></i>
+                            <span>contact@laehosting.fr</span>
+                        </div>
+
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary mr-4"></i>
+                            <span>123 Rue du Serveur, 75001 Paris, France</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-dark-light rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-light rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-light rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-light rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-dark-light p-6 rounded-lg shadow-lg">
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium mb-2">Nom</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-dark border border-dark-lighter rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Votre nom">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-dark border border-dark-lighter rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="votre@email.com">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 bg-dark border border-dark-lighter rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Sujet de votre message">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 bg-dark border border-dark-lighter rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white py-3 rounded-md font-semibold transition-colors">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-server text-primary text-xl mr-2"></i>
+                        <span class="text-xl font-bold">LaeHosting</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Hébergement de serveurs de jeux, VPS et serveurs dédiés avec une performance optimale et un support 24/7.
+                    </p>
+                    <p class="text-gray-500 text-sm">© <span id="currentYear"></span> LaeHosting. Tous droits réservés.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#games" class="text-gray-400 hover:text-primary transition-colors">Serveurs de Jeux</a></li>
+                        <li><a href="#vps" class="text-gray-400 hover:text-primary transition-colors">VPS</a></li>
+                        <li><a href="#dedicated" class="text-gray-400 hover:text-primary transition-colors">Serveurs Dédiés</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Domaines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Protection DDoS</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Jeux</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FiveM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Minecraft</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Garry's Mod</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">CS:GO</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">ARK</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Entreprise</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Conditions d'utilisation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Tabs functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-white');
+                    b.classList.add('bg-dark-lighter');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-white');
+                btn.classList.remove('bg-dark-lighter');
+                
+                // Hide all tab panes
+                tabPanes.forEach(pane => {
+                    pane.classList.add('hidden');
+                    pane.classList.remove('active');
+                });
+                
+                // Show corresponding tab pane
+                const tabId = btn.getAttribute('data-tab');
+                const activePane = document.getElementById(tabId);
+                if (activePane) {
+                    activePane.classList.remove('hidden');
+                    activePane.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Basic validation
+                if (!name || !email || !subject || !message) {
+                    alert('Veuillez remplir tous les champs du formulaire.');
+                    return;
+                }
+                
+                // Here you would typically send the form data to a server
+                // For this demo, we'll just show a success message
+                alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
