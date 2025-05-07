@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8a2be2',
+                        secondary: '#6a11cb',
+                        dark: {
+                            DEFAULT: '#121212',
+                            light: '#1e1e1e',
+                            lighter: '#2d2d2d'
+                        },
+                        bluey: {
+                          
+                            light: '#e8f5ff'
+                        },
+                    }
+                } 
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-dark via-dark-light to-secondary">
+    <style>
+        [x-cloak] {
+        display: none;
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    
+    <div class="container mx-auto antialiased text-gray-900" x-data="setup()">
+      <!-- Navbar -->
+      <nav>
+        <div class="flex items-center justify-between px-4 py-2">
+          <!-- Logo -->
+          <div class="flex items-center justify-start w-1/4">
+            <a href="./index.html">
+              <span class="sr-only">Home</span>
+              <span class="text-2xl font-semibold font-white"><span class="text-indigo-500">K</span>-UI </span>
+            </a>
+          </div>
+    
+          <!-- Mobile menu button -->
+          <button
+                  @click="isNavOpen = !isNavOpen"
+                  x-cloak
+                  class="inline-flex items-center justify-center text-gray-400 rounded-md lg:hidden focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  type="button"
+                  aria-controls="mobile-menu"
+                  :aria-expanded="isNavOpen ? 'true' : 'false'"
+                  >
+            <span class="sr-only">Open main menu</span>
+    
+            <!-- Menu icon -->
+            <svg
+                 x-show="!isNavOpen"
+                 class="w-8 h-8"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 aria-hidden="true"
+                 >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+    
+            
+          </button>
+    
+          <!-- Desktop Middle links -->
+          <div class="items-center justify-center hidden w-1/2 lg:flex">
+            <a
+               href="/index.html"
+               class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+               >
+              Home
+            </a>
+            <a
+               href="#"
+               class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+               >
+              Services
+            </a>
+            <a
+               href="#"
+               class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+               >
+              Contact
+            </a>
+          </div>
+    
+          <!-- Desktop Right links -->
+          <div class="items-center justify-end hidden w-1/4 space-x-2 lg:flex">
+            <a
+               href="/login.html"
+               class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+               >
+              Login
+            </a>
+            <a
+               href="/register.html"
+               class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm whitespace-nowrap hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+               >
+              Get Started
+            </a>
+          </div>
+        </div>
+    
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="flex flex-col items-center space-y-3 lg:hidden" x-cloak x-show="isNavOpen" @click.away="isNavOpen = false">
+          <a
+             href="/index.html"
+             class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+             >
+            Home
+          </a>
+          <a
+             href="#"
+             class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+             >
+            Services
+          </a>
+          <a
+             href="#"
+             class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-700"
+             >
+            Contact
+          </a>
+          <a
+             href="login.html"
+             class="px-4 py-2 text-base font-medium text-gray-400 transition-colors rounded-full hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+             >
+            Login
+          </a>
+          <a
+             href="register.html"
+             class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-full shadow-sm whitespace-nowrap hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+             >
+            Get Started
+          </a>
+        </div>
+      </nav>
+    
+      <main class="mx-4 my-16">
+        <div class="text-center">
+          <h1 class="mb-4 text-2xl font-normal text-white md:text-3xl lg:text-4xl">
+            Votre <span class="font-semibold">Host</span> pour votre <span class="font-semibold">Serveur Fivem</span>
+          </h1>
+          <p class="text-sm font-normal text-gray-400">
+            Vous pouvez créer votre serveur Fivem en quelques clics, sans aucune connaissance technique.
+          </p>
+          <p class="text-sm font-normal text-gray-400">
+            Nous vous proposons des serveurs de haute qualité, avec un support 24/7 et une assistance technique.
+          </p>
+        </div>
+    
+        <!-- Plan switch -->
+        <div class="flex items-center justify-center mt-10 space-x-4">
+          <span class="text-base text-white font-medium">Offre Mensuelle</span>
+          <button
+                  class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  x-cloak
+                  @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'"
+                  >
+            <div class="w-16 h-8 transition bg-indigo-500 rounded-full shadow-md outline-none"></div>
+            <div
+                 class="absolute inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform bg-white rounded-full shadow-sm top-1 left-1"
+                 :class="{ 'translate-x-0': billPlan == 'monthly', 'translate-x-8': billPlan == 'annually' }"
+                 ></div>
+          </button>
+          <span class="text-base text-white font-medium">Offre Annuelle</span>
+        </div>
+
+    <!-- Plans -->
+        <div
+        class="grid grid-cols-1 gap-16 mt-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center pl-16 pr-16">
+        <template x-for="(plan, i) in plans" x-key="i">
+          <section class="flex flex-col w-[280px] max-w-sm p-10 space-y-6 bg-dark-lighter rounded-lg shadow-md">
+
+             <!-- Name -->
+             <div class="flex-shrink-0 pb-6 border-b ">
+              <h2 class="text-2xl font-bold text-white" x-text="plan.name"></h2>
+              <!-- Price -->
+              <div class="flex-shrink-0">
+                <span
+                  class="text-4xl font-medium font-white text-white tracking-tight"
+                  :class="plan.name == 'FiveM Basic' ? 'text-white' : ''"
+                  x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
+                ></span>
+                <span class="text-white" x-text="billPlan == 'monthly' ? '/month' : '/year'"></span>
+              </div>
+            </div>
+          
+            <!-- Features -->
+            <ul class="flex-1 space-y-4">
+              <template x-for="(feature, i) in plan.features" :key="i">
+                <li class="flex items-start text-white">
+                  <!-- CPU -->
+                  <template x-if="getFeatureIcon(feature) === 'cpu'">
+                    <img width="20" height="20" src="/assets/img/icons8-electronics-50.png" alt="electronics"/>
+                  </template>
+                  
+                  <!-- vcore -->
+                  <template x-if="getFeatureIcon(feature) === 'vCore'">
+                    <img width="20" height="20" src="/assets/img/icons8-serveur-48.png" alt="servers"/>
+                  </template>
+                
+                  <!-- RAM -->
+                  <template x-if="getFeatureIcon(feature) === 'ram'">
+                    <img width="20" height="20" src="/assets/img/icons8-ram-49.png" alt="Ram"/>
+                  </template>
+            
+                  <!-- SSD -->
+                  <template x-if="getFeatureIcon(feature) === 'ssd'">
+                    <img width="20" height="20" src="/assets/img/icons8-ssd-50.png" alt="SSD"/>
+                  </template>
+
+                  <!-- gpbs -->
+                  <template x-if="getFeatureIcon(feature) === 'gbps'">
+                    <img width="20" height="20" src="/assets/img/icons8-lan-24.png" alt="gbps"/>
+                  </template>
+
+                  <!-- Joueurs -->
+                  <template x-if="getFeatureIcon(feature) === 'players'">
+                    <img width="20" height="20" src="/assets/img/icons8-groupe-50.png" alt="players"/>
+                  </template>
+            
+                  <!-- Par défaut -->
+                  <template x-if="getFeatureIcon(feature) === 'check'">
+                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.7-9.3a1 1 0 00-1.4-1.4L9 10.6 7.7 9.3a1 1 0 10-1.4 1.4l2 2a1 1 0 001.4 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </template>
+            
+                  <span class="ml-3 text-base font-medium" x-text="feature"></span>
+                </li>
+              </template>
+            </ul>
+            
+
+            <!-- Included -->
+            <ul class="flex-1 space-y-2">
+              <template x-for="(included, i) in plan.included" x-key="i">
+                <li class="flex items-start">
+                  <svg class="w-6 h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="ml-3 text-base font-medium text-white" x-text="included"></span>
+                </li>
+              </template>
+            </ul>
+
+            <!-- Button -->
+            <div class="flex-shrink-0 pt-4">
+              <button
+                class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                :class="plan.name == 'Basic' ? 'bg-indigo-500 text-white hover:bg-indigo-700' : 'hover:bg-indigo-500 hover:text-white'"
+                x-text="`Get ${plan.name}`"
+              ></button>
+            </div>
+            
+          </section>
+        </template>
+        </div>
+      </main>
+    </div>
+    
+    <script src="assets/js/billPlanmc.js"></script>
+      
+</body>
+</html>

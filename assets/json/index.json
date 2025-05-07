@@ -1,0 +1,296 @@
+{
+    "games": {
+        "fr": "Jeux",
+        "en": "Games"
+    },
+    "vps": {
+        "fr": "VPS",
+        "en": "VPS"
+    },
+    "dedicated": {
+        "fr": "Serveurs dédiés",
+        "en": "Dedicated servers"
+    },
+    "pricing": {
+        "fr": "Tarifs",
+        "en": "Pricing"
+    },
+    "contact": {
+        "fr": "Contact",
+        "en": "Contact"
+    },
+    "client": {
+        "fr": "Espace client",
+        "en": "Client area"
+    },
+    "hero-title": {
+        "fr": "Hébergez vos Serveurs de Jeux et VPS",
+        "en": "Host your Game and VPS Servers"
+    },
+
+    "hero-description": {
+        "fr": "Performance, stabilité et support 24/7 pour vos serveurs FiveM, Minecraft, GMod et bien plus encore.",
+        "en": "Performance, stability, and 24/7 support for your FiveM, Minecraft, GMod servers, and much more."
+    },
+    "start": {
+        "fr": "Commencer maintenant",
+        "en": "Start now"
+    },
+    "offers": {
+        "fr": "Voir les offres",
+        "en": "View offers"
+    },
+    "protection": {
+        "fr": "Protection DDoS",
+        "en": "DDoS Protection"
+    },
+    "perf": {
+        "fr": "Haute Performance",
+        "en": "High Performance"
+    },
+    "support": {
+        "fr": "Support 24/7",
+        "en": "24/7 Support"
+    },
+    "uptime": {
+        "fr": "Uptime 99.9%",
+        "en": "99.9% Uptime"
+    },
+    "game-servers": {
+        "fr": "Serveurs de jeux Optimisés",
+        "en": "Optimized Game Servers"
+    },
+    "serveurfivem": {
+        "fr": "Serveurs FiveM",
+        "en": "FiveM Servers"
+    },
+    "serveurfivem-desc": {
+        "fr": "Hébergez votre serveur GTA RP avec une performance optimale",
+        "en": "Host your GTA RP server with optimal performance"
+    },
+    "fivem-installation": {
+        "fr": "Installation automatique",
+        "en": "Automatic installation"
+    },
+    "fivem-ressources": {
+        "fr": "Ressources optimisées",
+        "en": "Optimized resources"
+    },
+    "fivemFTP": {
+        "fr": "Accès FTP",
+        "en": "FTP Access"
+    },
+    "fivem-sql": {
+        "fr": "Base de données MySQL",
+        "en": "MySQL Database"
+    },
+    "fivemprice": {
+        "fr": "À partir de 15€/mois",
+        "en": "Starting at 15€/month"
+    },
+    "minecraft-servers": {
+        "fr": "Serveurs Minecraft",
+        "en": "Minecraft Servers"
+    },
+    "minecraft-description": {
+        "fr": "Java ou Bedrock, hébergez votre serveur Minecraft avec une performance optimale",
+        "en": "Java or Bedrock, host your Minecraft server with optimal performance"
+    },
+    "minecraft-pterodactyl": {
+        "fr": "Panneau de contrôle Pterodactyl",
+        "en": "Pterodactyl Control Panel"
+    },
+    "minecraft-installation": {
+        "fr": "Installation de mods facile",
+        "en": "Easy mod installation"
+    },
+    
+    "minecraft-sauvegarde": {
+        "fr": "Sauvegardes automatiques",
+        "en": "Automatic backups"
+    },
+    "minecraft-support": {
+        "fr": "Support pour plugins",
+        "en": "Support for plugins"
+    },
+    "minecraftprice": {
+        "fr": "À partir de 8€/mois",
+        "en": "Starting at 10€/month"
+    },
+    
+    "gmod-servers": {
+        "fr": "Serveurs GMod",
+        "en": "GMod Servers"
+    },
+    "gmod-description": {
+        "fr": "Hébergez votre serveur Garry's Mod avec une performance optimale",
+        "en": "Host your Garry's Mod server with optimal performance"
+    },
+    "gmod-installation": {
+        "fr": "Installation de workshop facile",
+        "en": "Easy workshop installation"
+    },
+    "gmod-support": {
+        "fr": "Support pour addons",
+        "en": "Support for addons"
+    },
+    "gmod-Darkrp": {
+        "fr": "Configuration DarkRP optimisée",
+        "en": "Optimized DarkRP configuration"
+    },  
+    "gmod-accès": {
+        "fr": "Accès FastDL",
+        "en": "FastDL Access"
+    },
+    "gmodprice": {
+        "fr": "À partir de 12€/mois",
+        "en": "Starting at 12€/month"
+    },
+    "vps-servers": {
+        "fr": "Serveurs VPS",
+        "en": "VPS Servers"
+    },
+    "linux-servers": {
+        "fr": "Serveurs Linux",
+        "en": "Linux Servers"
+    },
+    "windows-servers": {
+        "fr": "Serveurs Windows",
+        "en": "Windows Servers"
+    },
+    "mois": {
+        "fr": "/mois",
+        "en": "/month"
+    },
+
+    "bandepassante": {
+        "fr": "Bande passante",
+        "en": "Bandwidth"
+    },
+    "commande": {
+        "fr": "Commander",
+        "en": "order"
+    },
+    "popular": {
+        "fr": "Populaire",
+        "en": "Popular"
+    },
+    "serveurs": {
+        "fr": "Serveurs Dédiés",
+        "en": "dedicated servers"
+    },
+    
+    "serveurdedies": {
+        "fr": "Serveur Dédié Game",
+        "en": "Dedicated Game servers"
+    },
+    "serveurdedies-desc": {
+        "fr": "Idéal pour les serveurs de jeux à forte charge",
+        "en": "Ideal for high-load game servers"
+    },
+    "bandepassanteill": {
+        "fr": "Bande passante illimitée",
+        "en": "illimited Bandwidth"
+    },
+    "vpsprotection": {
+        "fr": "Protection DDos avancée",
+        "en": "Advanced DDos Protection"
+    },
+    "lorw": {
+        "fr": "Linux ou Windows",
+        "en": "Linux or Windows"
+    },
+    "serveurpro": {
+    "fr": "Serveur Dédié Pro",
+    "en": "Dedicated pro servers"
+    },
+    "serveurpro-desc": {
+        "fr": "Pour les besoins professionnels et les grandes communautés",
+        "en": "For professional needs and large communities"
+    },
+    "whyus":  {
+        "fr": "Pourquoi Choisir LaeHost?",
+        "en": "Why choosing LaeHost?"
+    },
+    "whyus-desc": {
+        "fr": " Nos serveurs sont équipés de processeurs de dernière génération et de SSD NVMe pour des performances exceptionnelles.",
+        "en": "Our servers are equipped with next-generation processors and NVMe SSDs for exceptional performance."
+    },
+    "protection-desc": {
+        "fr": "Protection contre les attaques DDoS incluse avec tous nos services pour une disponibilité maximale.",
+        "en": "DDoS protection included with all our services for maximum uptime."
+    },
+    "support-desc": {
+        "fr": "Notre équipe de support technique est disponible 24/7 pour vous aider avec toutes vos questions.",
+        "en": "Our technical support team is available 24/7 to assist you with any questions."
+    },
+    "controlpanel": {
+        "fr": "Panneau de Contrôle",
+        "en": "Control Panel"
+    },
+    "panel-desc":{
+        "fr": "Interface intuitive pour gérer vos serveurs, avec accès FTP, console et sauvegardes.",
+        "en": "Intuitive interface to manage your servers, with FTP access, console, and backups."
+    },
+    "uptimeg": {
+        "fr": "Uptime Garantie",
+        "en": "Garanteed Uptime"
+    },
+    "uptimeg-desc": {
+        "fr": "Nous garantissons un uptime de 99.9% pour tous nos services avec SLA.",
+        "en": "We guarantee 99.9% uptime for all our services with SLA."
+    },
+    "clientsatisfaction": {
+        "fr": "Satisfaction Client",
+        "en": "Client Satisfaction"
+    },
+    "clientsatisfaction-desc": {
+        "fr": "Plus de 10 000 clients satisfaits nous font confiance pour leurs besoins d'hébergement.",
+        "en": "Over 10,000 satisfied clients trust us for their hosting needs."
+    },
+    "clientavis": {
+        "fr": "Ce que disent nos Clients",
+        "en": "What our Customers are saying"
+    },
+    "Maximeavis": {
+        "fr": "'J'héberge mon serveur FiveM chez LaeHosting depuis plus d'un an et je suis très satisfait. Le support est réactif et la performance est au rendez-vous.'",
+        "en":  "'I have been hosting my FiveM server at LaeHosting for more than a year and I am very satisfied. The support is responsive and the performance is there.'"
+    },
+    "Maximeservice": {
+        "fr": "Propriétaire de serveur FiveM",
+        "en": "FiveM server owner"
+    },
+    "Sophieavis":{
+       "fr": "'Le VPS que j'ai loué pour mon serveur Minecraft est parfait. Installation rapide et aucun problème de lag même avec 50 joueurs connectés.'",
+         "en": "'The VPS I rented for my Minecraft server is perfect. Quick installation and no lag issues even with 50 players connected.'"
+    },
+    "Sophieservice": {
+        "fr": "Administratrice de serveur Minecraft",
+        "en": "Minecraft server administrator"
+    },
+
+    "Thomasavis": {
+        "fr": "'Le serveur dédié que nous utilisons pour notre communauté GMod est excellent. Le support technique nous a aidés à tout configurer parfaitement.'",
+        "en": "'The dedicated server we use for our GMod community is excellent. The technical support helped us set everything up perfectly.'"
+    },
+    "Thomasservice": {
+        "fr": "Gérant de communauté GMod",
+        "en": "GMod community manager"
+    },
+    "contact-title": {
+        "fr": "Contactez-nous",
+        "en": "Contact us"
+    },
+    "help": {
+        "fr": "Besoin d'aide ?",
+        "en": "Need help?"
+    },
+    "help-desc": {
+        "fr": "Notre équipe est là pour vous aider 24/7. N'hésitez pas à nous contacter pour toute question ou demande d'assistance.",
+        "en": "Our team is here to help you 24/7. Feel free to contact us for any questions or support requests."
+    },
+    "Hostdesc": {
+        "fr": "Hébergement de serveurs de jeux, VPS et serveurs dédiés avec une performance optimale et un support 24/7.",
+        "en": "Hosting game servers, VPS, and dedicated servers with optimal performance and 24/7 support."
+    }
+}
