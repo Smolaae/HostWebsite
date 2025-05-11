@@ -58,7 +58,7 @@
                 </div>
                 
                 <div class="md:block">
-                    <a data-i18n="client" href="login.html" class="bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md font-semibold transition-colors">Espace Client</a> 
+                    <a data-i18n="client" href="login.php" class="bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md font-semibold transition-colors">Espace Client</a> 
                 </div>
             
                 <div class="md:hidden">
