@@ -262,9 +262,10 @@
             <!-- Button -->
             <div class="flex-shrink-0 pt-4">
               <button
-                class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                :class="plan.name == 'Basic' ? 'bg-indigo-500 text-white hover:bg-indigo-700' : 'hover:bg-indigo-500 hover:text-white'"
-                x-text="`Get ${plan.name}`"
+              class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              :class="plan.name == 'Basic' ? 'bg-indigo-500 text-white hover:bg-indigo-700' : 'hover:bg-indigo-500 hover:text-white'"
+              x-text="`Get ${plan.name}`"
+              @click="window.location.href = 'new_subscription.php'"
               ></button>
             </div>
           </section>

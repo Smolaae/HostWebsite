@@ -269,10 +269,11 @@
 
                     <!-- Button -->
                     <div class="flex-shrink-0 pt-4">
-                        <button
-                            class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-indigo-500 hover:text-white"
-                            x-text="`Commander ${plan.name}`"
-                        ></button>
+                      <button
+                        class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 bg-secondary text-white transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-indigo-500 hover:text-white"
+                        x-text="`Commander ${plan.name}`"
+                        @click="window.location.href = 'new_subscription.php?plan=' + encodeURIComponent(plan.name)"
+                      ></button>
                     </div>
                 </section>
             </template>

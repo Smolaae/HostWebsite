@@ -38,9 +38,7 @@ if (!$subscription) {
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- Header -->
-    <?php include 'includes/header.php'; ?>
-
+  
     <div class="container mx-auto py-10 px-4">
         <div class="flex items-center mb-8">
             <a href="subscriptions.php" class="text-blue-400 hover:underline mr-4">
@@ -224,7 +222,7 @@ if (!$subscription) {
     </div>
 
     <!-- Footer -->
-    <?php include 'includes/footer.php'; ?>
+  
 
     <script>
         function copyToClipboard(text) {

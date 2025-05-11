@@ -286,7 +286,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a data-i18n="commande" href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -322,7 +322,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a href="#" data-i18n="commande" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a href="new_subscription.php" data-i18n="commande" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -355,7 +355,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a data-i18n="commande" href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -392,7 +392,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a data-i18n="commande" href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -428,7 +428,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a data-i18n="commande" href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -461,7 +461,7 @@
                                     </ul>
                                 </div>
                                 <div class="px-6 py-4 border-t border-dark-lighter">
-                                    <a data-i18n="commande" href="#" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                                    <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-3 rounded-md font-semibold transition-colors">
                                         Commander
                                     </a>
                                 </div>
@@ -517,7 +517,7 @@
                         </ul>
                     </div>
                     <div class="px-6 py-4 border-t border-dark-lighter">
-                        <a data-i18n="Commande" href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                        <a data-i18n="Commande" href="new_subscription.php" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
                             Commander
                         </a>
                     </div>
@@ -559,7 +559,7 @@
                         </ul>
                     </div>
                     <div class="px-6 py-4 border-t border-dark-lighter">
-                        <a data-i18n="commande" href="#" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
+                        <a data-i18n="commande" href="new_subscription.php" class="block w-full bg-primary hover:bg-purple-700 text-white text-center py-3 rounded-md font-semibold transition-colors">
                             Commander
                         </a>
                     </div>
@@ -795,8 +795,6 @@
                         <li><a href="#games" class="text-gray-400 hover:text-primary transition-colors">Serveurs de Jeux</a></li>
                         <li><a href="#vps" class="text-gray-400 hover:text-primary transition-colors">VPS</a></li>
                         <li><a href="#dedicated" class="text-gray-400 hover:text-primary transition-colors">Serveurs Dédiés</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Domaines</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Protection DDoS</a></li>
                     </ul>
                 </div>
 
@@ -812,10 +810,10 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4">Entreprise</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">À propos</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Conditions d'utilisation</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="about.php" class="text-gray-400 hover:text-primary transition-colors">À propos</a></li>
+                        <li><a href="contact.php" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="terms.php" class="text-gray-400 hover:text-primary transition-colors">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.php" class="text-gray-400 hover:text-primary transition-colors">Politique de confidentialité</a></li>
                     </ul>
                 </div>
             </div>

@@ -34,7 +34,7 @@ $activeSubscriptions = array_filter($subscriptions, function($sub) {
 <body class="bg-gray-900 text-white">
     <header class="bg-gray-800 py-4">
         <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
-            <a href="index.php" class="text-2xl font-bold">HostWebsite</a>
+            <a href="index.php" class="text-2xl font-bold">LaeHost</a>
             
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -45,8 +45,7 @@ $activeSubscriptions = array_filter($subscriptions, function($sub) {
             <nav id="menu" class="hidden md:flex w-full md:w-auto mt-4 md:mt-0">
                 <ul class="flex flex-col md:flex-row md:space-x-6">
                     <li><a href="index.php" class="block py-2 hover:text-blue-400 transition duration-300">Accueil</a></li>
-                    <li><a href="services.php" class="block py-2 hover:text-blue-400 transition duration-300">Services</a></li>
-                    <li><a href="about.php" class="block py-2 hover:text-blue-400 transition duration-300">À propos</a></li>
+                    <li><a href="services.php" class="block py-2 hover:text-blue-400 transition duration-300">Services</a></li>                   
                     <li><a href="contact.php" class="block py-2 hover:text-blue-400 transition duration-300">Contact</a></li>
                     <?php if (isLoggedIn()): ?>
                         <li><a href="account.php" class="block py-2 hover:text-blue-400 transition duration-300">Mon compte</a></li>
