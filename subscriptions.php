@@ -21,10 +21,59 @@ $subscriptions = getUserSubscriptions($userId, $conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Abonnements - HostWebsite</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8a2be2',
+                        secondary: '#6a11cb',
+                        dark: {
+                            DEFAULT: '#121212',
+                            light: '#1e1e1e',
+                            lighter: '#2d2d2d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
 </head>
 <body class="bg-gray-900 text-white">
-   
+   <header class="bg-gray-800 py-4">
+        <div class="container flex flex-row justify-between mx-auto px-4 py-4">
+            <div class="flex items-center">
+                <i class="fas fa-server text-primary text-2xl mr-2"></i>
+                <span class=" text-2xl font-bold">LaeHosting</span>
+                <span class="ml-2 text-gray-400">/ Mes abonnements</span>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+                
+                <div id="menu" class="hidden md:flex w-full md:w-auto mt-4 md:mt-0">
+                    <ul class="flex md:flex-row md:space-x-6">
+                        <li><a href="index.php" class="block py-2 hover:text-blue-400 transition duration-300">Accueil</a></li>
+                        <li><a href="services.php" class="block py-2 hover:text-blue-400 transition duration-300">Services</a></li>                   
+                        <li><a href="contact.php" class="block py-2 hover:text-blue-400 transition duration-300">Contact</a></li>
+                        <?php if (isLoggedIn()): ?>
+                            <li><a href="account.php" class="block py-2 hover:text-blue-400 transition duration-300">Mon compte</a></li>
+                            <li><a href="logout.php" class="block py-2 hover:text-blue-400 transition duration-300">Déconnexion</a></li>
+                        <?php else: ?>
+                            <li><a href="login.php" class="block py-2 hover:text-blue-400 transition duration-300">Connexion</a></li>
+                            <li><a href="register.php" class="block py-2 hover:text-blue-400 transition duration-300">Inscription</a></li>
+                        <?php endif; ?>
+                    </ul>
+                        </div>
+            </div>
+        </div>
+    </header>
     <div class="container mx-auto py-10 px-4">
         <h1 class="text-3xl font-bold mb-8">Mes Abonnements</h1>
         
@@ -44,7 +93,7 @@ $subscriptions = getUserSubscriptions($userId, $conn);
                                 <a href="settings.php" class="block py-2 px-4 rounded hover:bg-gray-700 transition duration-300">Paramètres du compte</a>
                             </li>
                             <li>
-                                <a href="support.php" class="block py-2 px-4 rounded hover:bg-gray-700 transition duration-300">Support</a>
+                                <a href="ticket.php" class="block py-2 px-4 rounded hover:bg-gray-700 transition duration-300">Support</a>
                             </li>
                             <li>
                                 <a href="logout.php" class="block py-2 px-4 rounded hover:bg-red-700 text-red-400 hover:text-white transition duration-300">Déconnexion</a>

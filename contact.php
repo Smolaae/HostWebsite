@@ -1,5 +1,5 @@
 <?php
-// contact.php
+
 
 $success = $error = "";
 
@@ -80,49 +80,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     ]
                 }
             }
+            @utility tab-* {
+                 tab-size: --value(--tab-size-*);
+            }
         }
     </script>
 </head>
-<body>
-    <header class="bg-gray-800 text-white">
-        <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
-            <a href="index.php" class="text-2xl font-bold">LaeHost</a>
-            
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    </header>
-
-    <section class="bg-gray-800 dark:bg-gray-900">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-            
-            <?php if (!empty($success)): ?>
-                <p class="mb-4 text-green-500 text-center"><?php echo $success; ?></p>
-            <?php elseif (!empty($error)): ?>
-                <p class="mb-4 text-red-500 text-center"><?php echo $error; ?></p>
-            <?php endif; ?>
-
-            <form action="contact.php" method="POST" class="space-y-8">
-                <div>
-                    <label for="name" class="block mb-2 text-sm font-medium text-white">Your name</label>
-                    <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Your name" required>
-                </div>
-                <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Your email</label>
-                    <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@mail.com" required>
-                </div>
-                <div>
-                    <label for="message" class="block mb-2 text-sm font-medium text-white dark:text-white">Your message</label>
-                    <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
-                </div>
-                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-            </form>
-        </div>
-    </section>
+<body class ="bg-gray-700">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+	<div class="flex flex-col justify-between">
+		<div class="space-y-2">
+			<h2 class="text-4xl font-bold text-white leading-tight lg:text-5xl">Let's talk!</h2>
+			<div class="text-white">Un problème ? Une question ? N'hésitez pas à nous contacter.</div>
+		</div>
+		<img src="assets/img/contact.svg" alt="" class="p-6 h-52 md:h-64">
+	</div>
+	<form novalidate="" class="space-y-6">
+		<div>
+			<label for="name" class="text-sm text-white">Prénom</label>
+			<input id="name" type="text" placeholder="" class="w-full p-3 rounded dark:bg-gray-100">
+		</div>
+		<div> 
+			<label for="email" class="text-sm text-white">Email</label>
+			<input id="email" type="email" class="w-full p-3 rounded dark:bg-gray-100">
+		</div>
+		<div>
+			<label for="message" class="text-sm text-white">Message</label>
+			<textarea id="message" rows="3" class="w-full p-3 rounded dark:bg-gray-100"></textarea>
+		</div>
+		<button type="submit" class="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-600 dark:text-gray-50">Send Message</button>
+	</form>
+</div>
+    
 </body>
 </html>

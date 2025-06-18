@@ -86,3 +86,6 @@ INSERT INTO subscriptions (user_id, service_type, plan, price, start_date, end_d
 (1, 'fivem', 'Standard', 19.99, DATE_SUB(CURDATE(), INTERVAL 2 MONTH), DATE_ADD(CURDATE(), INTERVAL 1 MONTH), 'active', '192.168.1.1', 30120),
 (1, 'minecraft', 'Premium', 29.99, DATE_SUB(CURDATE(), INTERVAL 3 MONTH), DATE_SUB(CURDATE(), INTERVAL 1 DAY), 'expired', '192.168.1.2', 25565),
 (1, 'linux', 'Basic VPS', 9.99, DATE_SUB(CURDATE(), INTERVAL 1 MONTH), DATE_ADD(CURDATE(), INTERVAL 2 MONTH), 'active', '192.168.1.3', 22);
+
+
+
